@@ -1,0 +1,9 @@
+$primary:#4F4846;
+$light:#FDF8F5;
+
+@mixin media-lg{
+    @media only screen and (min-width:768px){
+        @content;
+    }
+
+}
