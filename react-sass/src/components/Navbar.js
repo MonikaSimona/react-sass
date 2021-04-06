@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 export default function Navbar() {
     let initialWidthBool = window.innerWidth > 768 ? false : true;
     let widthValue;
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false); //change to initial true
     const [width, setWidth] = useState(initialWidthBool);
     useEffect(() => {
         window.addEventListener('resize',() => {
@@ -34,7 +34,7 @@ export default function Navbar() {
     return (
         <nav>
             <ul className='container'>
-                <li className='logo'>LOGO</li>
+            <NavLink to='/'> <li className='logo'>LOGO</li></NavLink>
                 <img src={require('../assets/menu.svg').default} alt="open menu" className='menu-button' onClick={openMenu} />
                 
                 <div className={`menu ${open ? 'menu-open menu-shadow ' : ' menu-close'}`}>
